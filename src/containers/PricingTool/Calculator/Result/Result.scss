@@ -1,0 +1,10 @@
+@import "../../../../sass/_variables_";
+
+.result {
+    position: absolute;
+    right: 0;
+    top: $top-align;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 20px 40px;
+}

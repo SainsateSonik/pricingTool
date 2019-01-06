@@ -1,0 +1,43 @@
+@import "../../sass/_variables_";
+
+.authenticate {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    .auth-wrapper {
+        position: absolute;
+        left: 0;
+        top: $header-height;
+        height: 100vh - $header-height;
+        width: 100%;
+        background-color: $color-on-hover;
+        clip-path: polygon(0 0, 50% 0, 90% 100%, 0 100%);
+        opacity: 0;
+        animation: glide-wrapper ($animation-interval + 0.1s) forwards ease-in-out;
+    }
+
+    .graphic {
+        position: absolute;
+        left: 50px;
+        top: 100vh;
+        transform: translateY(-40%) scale(0.8);
+        animation:  graphic-rise ($animation-interval + 0.1s) forwards,
+                    float-graphic ($animation-interval + 0.2s) ($animation-interval + 0.2s) both alternate-reverse infinite ease-in-out;
+    }
+}
+
+@keyframes glide-wrapper {
+    0%   { clip-path: polygon(0 0, 0   0, 0   100%, 0 100%); opacity: 0; }
+    100% { clip-path: polygon(0 0, 40% 0, 20% 100%, 0 100%); opacity: 1; }
+}
+
+@keyframes graphic-rise {
+    0%   { opacity: 0; top: 100vh }
+    100% { opacity: 1; top: 50vh + $header-height/2 }
+}
+
+@keyframes float-graphic {
+    0%   { transform: translateY(-35%) scale(0.84) }
+    100% { transform: translateY(-36%) scale(0.85) }
+}

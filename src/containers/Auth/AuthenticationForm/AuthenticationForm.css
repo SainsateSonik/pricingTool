@@ -1,0 +1,139 @@
+.authentication-form {
+  position: absolute;
+  top: 54vh;
+  right: -50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fff;
+  -webkit-animation: auth-rise 0.75s forwards;
+          animation: auth-rise 0.75s forwards;
+}
+
+.authentication-form form {
+  padding: 20px 30px;
+  position: relative;
+}
+
+.authentication-form form div {
+  position: relative;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.authentication-form form div:last-of-type {
+  margin-bottom: 10px;
+}
+
+.authentication-form form div label {
+  font-size: 15px;
+  color: #888;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.authentication-form form div input {
+  font-size: 15px;
+  background: transparent;
+  color: #222;
+  width: 100%;
+  padding-left: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  letter-spacing: 0.2px;
+}
+
+.authentication-form form div input:focus {
+  outline: none;
+  border-bottom: 1px solid #0099ff;
+}
+
+.authentication-form form div input:focus + label {
+  color: #0071AE;
+  font-size: 16px;
+}
+
+.authentication-form form div button {
+  cursor: pointer;
+  width: 50%;
+  background-color: white;
+  font-size: 0.8em;
+  color: #0071AE;
+  border: 1px solid #0071AE;
+  padding: 5px 10px;
+  border-radius: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.authentication-form form div button:hover {
+  width: 80%;
+  background-color: #0071AE;
+  color: white;
+}
+
+.authentication-form form div button:focus {
+  outline: none;
+}
+
+@-webkit-keyframes auth-rise {
+  0% {
+    right: -50%;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  33% {
+    right: 220px;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  66% {
+    right: 200px;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    right: 200px;
+    top: 53vh;
+    -webkit-box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes auth-rise {
+  0% {
+    right: -50%;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  33% {
+    right: 220px;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  66% {
+    right: 200px;
+    top: 54vh;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    right: 200px;
+    top: 53vh;
+    -webkit-box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+/*# sourceMappingURL=AuthenticationForm.css.map */

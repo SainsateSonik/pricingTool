@@ -1,0 +1,99 @@
+@import "../../../sass/_variables_";
+
+$transition-time: 0.3s;
+
+.authentication-form{
+    position: absolute;
+    top: $top-align;
+    right: -50%;
+    transform: translateY(-50%);
+    width: 30%;
+    transition: $transition-time;
+    background-color: #fff;
+    animation: auth-rise ($animation-interval * 1.5) forwards;
+
+    form {
+        padding: 20px 30px;
+        position: relative;
+
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     bottom: 0;
+        //     height: 5px;
+        //     width: 5px;
+        //     background-color: $color-on-hover;
+        // }
+
+        div {
+            position: relative;
+            margin: 15px 0;
+            text-align: center;
+            
+            &:last-of-type {
+                margin-bottom: 10px;
+            }
+
+            label {
+                font-size: 15px;
+                color: #888;
+                position: absolute;
+                left: 0;
+                top: 2px;
+                transition: $transition-time;
+            }
+
+            input {
+                font-size: 15px;
+                background: transparent;
+                color: #222;
+                width: 100%;
+                padding-left: 25px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                transition: $transition-time;
+                letter-spacing: 0.2px;
+
+                &:focus{
+                    outline: none;
+                    border-bottom: 1px solid $color-on-hover;
+
+                    & + label {
+                        color: #0071AE;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            button {
+                cursor: pointer;
+                width: 50%;
+                background-color: white;
+                font-size: 0.8em;
+                color: #0071AE;
+                border: 1px solid #0071AE;
+                padding: 5px 10px;
+                border-radius: 100px;
+                transition: $transition-time;
+
+                &:hover {
+                    width: 80%;
+                    background-color: #0071AE;
+                    color: white;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes auth-rise {
+    0%   { right: -50%;  top: $top-align;           box-shadow: none; }
+    33%  { right: 220px; top: $top-align;           box-shadow: none;}
+    66%  { right: 200px; top: $top-align;           box-shadow: none;}
+    100% { right: 200px; top: ($top-align - 1vh );  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.7); }
+}
